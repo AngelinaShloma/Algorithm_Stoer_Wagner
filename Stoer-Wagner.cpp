@@ -128,8 +128,7 @@ int main() {
 	int n = 50;
 	int m;
 	for (int k = 0; k < 10; ++k) {
-		m = rand() % (n * (n - 1) / 2) + (n - 1);
-		cout << n << ", " << m << endl;
+		m = rand() % ((n * (n - 1) / 2) - (n - 1)) + (n - 1);
 		int **G = new int*[n];
 		for (int i = 0; i < n; ++i) G[i] = new int[n];
 		G = GenerateGraph(n, m);
@@ -150,8 +149,7 @@ int main() {
 
 	n = 100;
 	for (int k = 0; k < 10; ++k) {
-		m = rand() % (n * (n - 1) / 2) + (n - 1);
-		cout << n << ", " << m << endl;
+		m = rand() % ((n * (n - 1) / 2) - (n - 1)) + (n - 1);
 		int **G = new int*[n];
 		for (int i = 0; i < n; ++i) G[i] = new int[n];
 		G = GenerateGraph(n, m);
